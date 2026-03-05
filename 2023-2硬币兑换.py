@@ -1,20 +1,15 @@
-max_sum = 0
-best_x = 0
+import os
+import sys
 
-# 我们只需要检查 x 在 [2, 4046] 这个范围内，因为最大的兑换面值是 2023 + 2023 = 4046
-for x in range(2, 4047):
-    current_sum = 0
-    # 初始数量
-    if x <= 2023:
-        current_sum += x
-    # 旧版贡献
-    for a in range(1, x):
-        b = x - a
-        if 1 <= a <= 2023 and 1 <= b <= 2023:
-            current_sum += min(a, b)
-    if current_sum > max_sum:
-        max_sum = current_sum
-        best_x = x
+# 请在此输入您的代码
+result = [0 for _ in range(4047)]
+for i in range(1, 2023):
+    result[i] = i
 
-print(max_sum)
-# print(f"对应的面值 x: {best_x}")
+for i in range(2, 2023):
+    result[i * 2] += i // 2
+
+for i in range(1, 2024):
+    for j in range(i + 1, 2024):
+        result[i + j] += i
+print(max(result))

@@ -1,20 +1,14 @@
-import math
-
-# 把抄好的数字直接放这里
-r_tuple = (
-    1, 2, 1, 4, 5, 4, 1, 2, 9, 0, 5, 10, 11, 14, 9, 0, 11, 18, 9, 11,
-    11, 23, 17, 9, 23, 20, 25, 16, 29, 27, 25, 11, 17, 4, 29, 22,
-    37, 23, 9, 1, 11, 11, 33, 29, 15, 5, 41, 46
-)
-
-current = r_tuple[0]  # a=2 的余数
-step = 2
-
-for i in range(1, len(r_tuple)):
-    a = i + 2  # 下标i对应除数a=i+2
-    target_r = r_tuple[i]
-    while current % a != target_r:
-        current += step
-    step = step * a // math.gcd(step, a)
-
-print(current)
+# L=[]
+# for i in range(187,10**12,187):
+#     if i%44==33 and i%45==29 and i%46==15 and i%47==5 and i%48==41 and i%49==46:
+#     #else:
+#         L.append(i)
+#     if len(L)>=2:
+#         break
+L=[5458460249, 12590206409]
+step=L[1]-L[0]
+flag=0
+for i in range(L[0],10**17,step):
+    if i%20==9 and i%25==9 and i%26==23 and i%27==20 and i%28==25 and i%29==16 and i%30==29 and i%31==27 and i%32==25 and i%33==11 and i%34==17 and i%35==4 and i%36==29 and i%37==22 and i%38==37 and i%39==23 and i%40==9 and i%41==1 and i%42==11 and i%43==11 :
+        print(i)
+        break

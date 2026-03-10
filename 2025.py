@@ -1,4 +1,4 @@
-#1模拟
+# 1 模拟
 # n = 2025
 # s = 0
 # while n > 0:
@@ -22,7 +22,7 @@
 # print(s)
 
 
-#2字符串模拟+状态dp
+# 2 字符串模拟+状态dp
 # with open("words.txt",'r',encoding="UTF-8") as f:
 #     data = [l.strip() for l in f if l.strip()]
 # data.sort(key=lambda x:len(x))
@@ -38,7 +38,7 @@
 
 
 
-# 3模拟
+# 3 模拟
 # w,h,v = map(int,input().split())
 # for i  in range(h + w):
 #     if i < h:
@@ -52,7 +52,7 @@
 #     print("Q" * (w+v))
 
 
-#4贪心+字符串
+# 4 贪心+字符串
 # s = input()
 # n = len(s)
 # count = 0
@@ -67,18 +67,32 @@
 #         continue
 # print(count)
 
-#5
-count = 0
-L = int(input())
-for xa in range(1,L+1):
-    for xb in range(1,L+1):
-        for ya in range(1,L+1):
-            max_yb = (L - xa*xb)//ya
-            if max_yb >= 1:
-                count += max_yb
-print(count)
+# 5 暴力枚举
+# count=0
+# L = int(input())
+# for xa in range(1,L+1):
+#     for xb in range(1,L+1):
+#         for ya in range(1,L+1):
+#             max_yb = (L - xa*xb)//ya
+#             if max_yb >= 1:
+#                 count += max_yb
+# print(count)
 
 
+# 6 约束dp+枚举
+import sys
+n = int(input())
+h = list(map(int,sys.stdin.readline().split()))
+dp = [dict() for _ in range(n)]
+max = 1
+for i in range(n):
+    for j in range(i):
+        if h[j] < h[i]:
+            d = i - j
+            dp[i][d] = dp[j].get(d,1) + 1
+            if dp[i][d] > max:
+                max = dp[i][d]
+print(max)
 
 
 

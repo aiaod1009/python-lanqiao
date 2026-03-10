@@ -79,7 +79,7 @@
 # print(count)
 
 
-# 6 约束dp+枚举
+# 6 约束dp+枚举(最长递增子序列（LIS）变种)
 import sys
 n = int(input())
 h = list(map(int,sys.stdin.readline().split()))

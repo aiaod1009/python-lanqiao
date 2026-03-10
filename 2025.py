@@ -38,21 +38,34 @@
 
 
 
-3模拟
-w,h,v = map(int,input().split())
-for i  in range(h + w):
-    if i < h:
-        print(''.join('Q' for _ in range(w)))
+# 3模拟
+# w,h,v = map(int,input().split())
+# for i  in range(h + w):
+#     if i < h:
+#         print(''.join('Q' for _ in range(w)))
+#     else:
+#         print(''.join('Q' for _ in range(w+v)))
+#
+# for i in range(h):
+#     print("Q" * w)
+# for i in range(w):
+#     print("Q" * (w+v))
+
+
+#4贪心+字符串
+s = input()
+n = len(s)
+count = 0
+i = 0
+while i <= n-3:
+    sub = s[i:i+3]
+    if set(sub) == {'l','q','b'}:
+        count += 1
+        i += 3
     else:
-        print(''.join('Q' for _ in range(w+v)))
-
-for i in range(h):
-    print("Q" * w)
-for i in range(w):
-    print("Q" * (w+v))
-
-
-
+        i += 1
+        continue
+print(count)
 
 
 

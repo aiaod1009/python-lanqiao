@@ -53,22 +53,30 @@
 
 
 #4贪心+字符串
-s = input()
-n = len(s)
+# s = input()
+# n = len(s)
+# count = 0
+# i = 0
+# while i <= n-3:
+#     sub = s[i:i+3]
+#     if set(sub) == {'l','q','b'}:
+#         count += 1
+#         i += 3
+#     else:
+#         i += 1
+#         continue
+# print(count)
+
+#5
 count = 0
-i = 0
-while i <= n-3:
-    sub = s[i:i+3]
-    if set(sub) == {'l','q','b'}:
-        count += 1
-        i += 3
-    else:
-        i += 1
-        continue
+L = int(input())
+for xa in range(1,L+1):
+    for xb in range(1,L+1):
+        for ya in range(1,L+1):
+            max_yb = (L - xa*xb)//ya
+            if max_yb >= 1:
+                count += max_yb
 print(count)
-
-
-
 
 
 

@@ -1,6 +1,3 @@
-import os
-import sys
-# 请在此输入您的代码
 n,m = map(int,input().split())
 arr = []
 for i in range(n):

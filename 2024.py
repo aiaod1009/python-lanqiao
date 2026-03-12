@@ -15,6 +15,7 @@
 #     if sum1 == sum2:
 #         count += 1
 # print(count)
+import sys
 
 # 2 模拟
 # mod=10**9 + 7
@@ -48,25 +49,35 @@
 # print(count)
 
 # 4
-import sys
-from datetime import datetime,timedelta
-T = int(input())
+# import sys
+# from datetime import datetime,timedelta
+# T = int(input())
+#
+# d0 = datetime(1970,1,1,0,0,0)
+#
+# for _ in range(T):
+#     s = sys.stdin.readline().strip()
+#     part = s.split()
+#     t = ' '.join(part[:2])
+#     x = int(part[2])
+#     t1 = datetime.strptime(t,"%Y-%m-%d %H:%M:%S")
+#     total = (t1 - d0).total_seconds()
+#     x *= 60
+#     last = total - (total % x)
+#
+#     ans = d0 + timedelta(seconds=last)
+#     print(ans.strftime("%Y-%m-%d %H:%M:%S"))
 
-d0 = datetime(1970,1,1,0,0,0)
-
-for _ in range(T):
-    s = sys.stdin.readline().strip()
-    part = s.split()
-    t = ' '.join(part[:2])
-    x = int(part[2])
-    t1 = datetime.strptime(t,"%Y-%m-%d %H:%M:%S")
-    total = (t1 - d0).total_seconds()
-    x *= 60
-    last = total - (total % x)
-
-    ans = d0 + timedelta(seconds=last)
-    print(ans.strftime("%Y-%m-%d %H:%M:%S"))
-
+# 5 思维题
+T= int(input())
+for i in range(T):
+    n = int(input())
+    ans = 0
+    if n % 3 == 0:
+        ans += (n+n//3*3)
+    else:
+        ans += n
+    print(ans)
 
 
 

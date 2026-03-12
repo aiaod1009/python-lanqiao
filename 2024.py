@@ -16,15 +16,36 @@
 #         count += 1
 # print(count)
 
-2 模拟
-mod=10**9 + 7
-n = pow(9,10000,mod)
-x = pow(8,10000,mod) #没7或者没3的
-y = pow(7,10000,mod) #又没7又没3的
-print((n-2*x+y)%mod)
+# 2 模拟
+# mod=10**9 + 7
+# n = pow(9,10000,mod)
+# x = pow(8,10000,mod) #没7或者没3的
+# y = pow(7,10000,mod) #又没7又没3的
+# print((n-2*x+y)%mod)
 
+#3
+from collections import defaultdict
+n,m = map(int,input().split())
+a=[]
+for i in range(n):
+    a.append(list(map(int, input().split())))
 
+diag1 = defaultdict(lambda: defaultdict(int))
+diag2 = defaultdict(lambda: defaultdict(int))
 
+for i in range(n):
+    for j in range(m):
+        val = a[i][j]
+        diag1[val][i-j] += 1
+        diag2[val][i+j] += 1
+count = 0
+for val in diag1:
+    for n in diag1[val].values():
+        count += n * (n-1)
+    for n in diag2[val].values():
+        count += n * (n-1)
+
+print(count)
 
 
 

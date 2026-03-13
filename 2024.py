@@ -69,15 +69,15 @@ import sys
 #     print(ans.strftime("%Y-%m-%d %H:%M:%S"))
 
 # 5 思维题
-T= int(input())
-for i in range(T):
-    n = int(input())
-    ans = 0
-    if n % 3 == 0:
-        ans += (n+n//3*3)
-    else:
-        ans += n
-    print(ans)
+# T= int(input())
+# for i in range(T):
+#     n = int(input())
+#     ans = 0
+#     if n % 3 == 0:
+#         ans += (n+n//3*3)
+#     else:
+#         ans += n
+#     print(ans)
 
 
 

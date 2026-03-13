@@ -1,3 +1,4 @@
+#并查集
 class UnionFind:
     def __init__(self, n):
         self.fa = list(range(n + 1))  # 初始化父节点

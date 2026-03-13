@@ -1,4 +1,5 @@
 # 不会不会不会
+#鸽巢原理 + 二分答案
 
 def solve():
     n, k = map(int, input().split())

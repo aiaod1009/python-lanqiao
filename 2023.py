@@ -31,20 +31,56 @@
 #         max_cnt[s] += add
 # print(max(max_cnt))
 
-# 3 线性二维dp
+# 3 线性二维dp(一维也可以解，详细看2023-3）
+# import sys
+# input = lambda: sys.stdin.readline().strip()
+# s = input()
+# n = len(s)
+# dp = [[0]*2 for _ in range(n+1)]
+# def val(c):
+#     return ord(c)-96
+# # dp[0][0]=0
+# # dp[0][1]=val(s[0])
+# for i in range(1,n+1):
+#     dp[i][0] = max(dp[i-1][0],dp[i-1][1])
+#     dp[i][1] = dp[i-1][0] + val(s[i-1])
+# print(max(dp[n][0],dp[n][1]))
+
+# 4 贪心+二分
+
+
+
+
+
+
+# 5 二维线性dp(偏难)
 import sys
 input = lambda: sys.stdin.readline().strip()
-s = input()
-n = len(s)
-dp = [[0]*2 for _ in range(n+1)]
-def val(c):
-    return ord(c)-96
-# dp[0][0]=0
-# dp[0][1]=val(s[0])
-for i in range(1,n+1):
-    dp[i][0] = max(dp[i-1][0],dp[i-1][1])
-    dp[i][1] = dp[i-1][0] + val(s[i-1])
-print(max(dp[n][0],dp[n][1]))
+n = input()
+x = input()
+y = input()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

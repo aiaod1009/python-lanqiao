@@ -29,3 +29,15 @@ print(s.climbStairs(3))  # 输出 3
 #     return dfs(n-1) + dfs(n-2)
 #
 # print(dfs(3))  # 3，和原代码结果一致
+
+# 无typing版
+def rob(nums):
+    n = len(nums)
+    f = [[0] * 2 for _ in range(n + 1)]
+    for i in range(1, n + 1):
+        f[i][0] = max(f[i-1][1], f[i-1][0])
+        f[i][1] = f[i-1][0] + nums[i-1]
+    return max(f[n][1], f[n][0])
+
+nums = [1,2,3,1]
+print(rob(nums))  # 输出4，完全正常

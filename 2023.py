@@ -111,11 +111,11 @@ print(max(dp[1][0], dp[1][1]))
 
 
 # 10 模拟+贪心
-import sys
-input = lambda: sys.stdin.readline().strip()
-n = int(input())
-arr = list(map(int,input()))
-for i in range()
+# import sys
+# input = lambda: sys.stdin.readline().strip()
+# n = int(input())
+# arr = list(map(int,input()))
+# for i in range()
 
 
 

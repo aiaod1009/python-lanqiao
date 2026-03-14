@@ -6,6 +6,7 @@ result = [0 for _ in range(4047)]
 for i in range(1, 2023):
     result[i] = i
 
+#代码冗余
 for i in range(2, 2023):
     result[i * 2] += i // 2
 

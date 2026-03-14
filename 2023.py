@@ -20,12 +20,12 @@
 # print(cnt)
 
 # 2 枚举
-max_cnt = [0] * (4046)
-for i in range (1,2024):
-    max_cnt[i] = i
+max_cnt = [0] * 4046
+for i in range(1,2023):
+    max_cnt[i] += i
 
-for i in range(1,2024):
-    for j in range(i + 1,2024):
+for i in range(1,2023):
+    for j in range(i+1,2023):
         s = i + j
         add = min(i,j)
         max_cnt[s] += add

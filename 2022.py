@@ -7,21 +7,20 @@
 
 
 # 3	纸张尺寸	模拟、递推	⭐⭐	模拟纸张对折 / 尺寸变化，简单递推
-n = int(input()[1:])
-l = 1189
-w = 841
-for i in range(n):
-    l , w = w , l // 2
-print(l)
-print(w)
+# n = int(input()[1:])
+# l = 1189
+# w = 841
+# for i in range(n):
+#     l , w = w , l // 2
+# print(l)
+# print(w)
 
 # 4	数位排序	排序、数位和	⭐⭐	自定义排序规则（按数位和排序）
-
-
-
-
-
-
+n = int(input())
+m = int(input())
+a = list(range(1,n+1))
+a.sort(key=lambda x:(sum(int(c) for c in str(x)),x))
+print(a[m-1])
 
 
 # 5	蜂巢	几何、坐标 / 模拟	⭐⭐⭐⭐	六边形网格坐标与距离计算，偏竞赛思维

@@ -1,16 +1,16 @@
 # 1	排列字母	字符串、排序 / 模拟	⭐⭐	基础字符串处理，按规则排序 / 拼接
-s = 'WHERETHEREISAWILLTHEREISAWAY'
-s = sorted(s)
-print(''.join(s))
+# s = 'WHERETHEREISAWILLTHEREISAWAY'
+# s = sorted(s)
+# print(''.join(s))
 
 # 2	寻找整数	数学、枚举 / 打表	⭐⭐⭐	找满足条件的整数，需要数学推导或预处理
-
-
-
-
-
-
-
+n = int(input()[1:])
+l = 1189
+w = 841
+for i in range(n):
+    l , w = w , l // 2
+print(l)
+print(w)
 
 # 3	纸张尺寸	模拟、递推	⭐⭐	模拟纸张对折 / 尺寸变化，简单递推
 

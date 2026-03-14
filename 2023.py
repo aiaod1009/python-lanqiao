@@ -100,7 +100,7 @@ for i in range(deep_max, 0, -1):  # 从deep_max~1深度,自下向上
 print(max(dp[1][0], dp[1][1]))
 
 
-# 8 图论 树
+# 8 图论 树 贪心
 
 
 

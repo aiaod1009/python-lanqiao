@@ -31,6 +31,7 @@ for i in range(1,2023):
         max_cnt[s] += add
 print(max(max_cnt))
 
+# 3
 
 
 

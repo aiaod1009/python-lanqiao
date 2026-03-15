@@ -1,4 +1,3 @@
-import os
 import sys
 
 w, h, v = map(int, sys.stdin.readline().split())

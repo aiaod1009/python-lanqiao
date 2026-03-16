@@ -27,7 +27,7 @@ def pos(num):
         row = num // w + 1
         col = num % w
     if row % 2 == 0:
-        col = w - col + 1  #奇偶反转核心公式
+        col = w + 1 - col  #奇偶反转核心公式
     return row,col
 l1,w1 = pos(m)
 l2,w2 = pos(n)

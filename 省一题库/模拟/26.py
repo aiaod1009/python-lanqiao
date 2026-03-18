@@ -27,6 +27,7 @@ for _ in range(T):
         if(Big and Small and Digit and SpecialSet):
             print(3)
             continue
+        # 布尔值转整数（int(布尔值)）  True是1,False是0
         if(int(Big)+int(Small)+int(Digit)>=2 and len(SpecialSet)>=3):
             print(3)
             continue

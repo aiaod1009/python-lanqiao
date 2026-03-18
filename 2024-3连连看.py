@@ -1,3 +1,4 @@
+# 会超时，只能部分ac
 n,m = map(int,input().split())
 arr = []
 for i in range(n):

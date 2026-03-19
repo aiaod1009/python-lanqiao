@@ -8,5 +8,6 @@ for n in range(1,1000001):
             sn = str(n)
             if sorted(sab) == sorted(sn):
                 cnt += 1
-            break
+                break
 print(cnt)
+

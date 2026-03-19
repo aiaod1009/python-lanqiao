@@ -7,6 +7,10 @@ def check(x):
             return True
         x //= 10
     return False
+#字符串方法也可以，性能差不多
+    # s = str(x)
+    # return '0' in s or '2' in s or '4' in s
+
 c = 1
 cnt = 0
 for i in range(n):

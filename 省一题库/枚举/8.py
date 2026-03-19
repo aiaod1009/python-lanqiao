@@ -18,34 +18,3 @@ for i in range(N):
     if pk > ans:
         ans = pk
 print(ans)
-
-
-
-
-
-
-
-
-
-
-
-# num = int(input())  # 卡片数目
-# arr = input()  # 顺时针排列的卡片
-# result = 0  # 最后赢的球票张数
-# for i in range(num):  # 用 i 的变化来表示从哪里开始数
-#     pocket = 0  # 赢来的球票数目
-#     nums = 1  # 计数器初始化
-#     numarr = list(map(int, arr.split()))  # 初始化 arr 列表于 int 类型
-#     while numarr and nums <= max(numarr):  # 循环条件： numarr 列表中还有卡片，且 nums 的数字不大于 numarr 中最大的数字
-#         if numarr[i] == nums:  # 满足获取条件时
-#             pocket += numarr.pop(i)  # pop()用于删除并返回列表中的一个元素
-#             nums = 1  # 计数器重置
-#             if len(numarr) == 0:  # 判断 numarr 是否为空
-#                 break
-#             i = i % len(numarr)  # 循环队列头尾
-#         else:  # 不满足获取条件
-#             nums += 1
-#             i = (i + 1) % len(numarr)  # 循环队列头尾
-#     if pocket > result:  # 只要每次循环中赢得球票数量最多的那次结果
-#         result = pocket
-# print(result)

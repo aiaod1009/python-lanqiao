@@ -1,14 +1,22 @@
-import sys
-
+n = int(input())
+a = [0]+list(map(int,input().split()))
+res = 0
+for i in range(1,n+1):
+    while a[i] != i:
+        tmp = a[a[i]]
+        a[a[i]] = a[i]
+        a[i] = tmp
+        res += 1
+print(res)
 
 # 暴力
-n = int(input())
-a = list(map(int, input().split()))
-ans = 0
-for i in range(n):
-    for j in range(n):
-        ans += (a[i] ^ a[j]) * abs(i - j)
-print(ans)
+# n = int(input())
+# a = list(map(int, input().split()))
+# ans = 0
+# for i in range(n):
+#     for j in range(n):
+#         ans += (a[i] ^ a[j]) * abs(i - j)
+# print(ans)
 
 
 # def ms(arr):

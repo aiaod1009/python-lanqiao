@@ -12,3 +12,7 @@ while i < n and j < m:
         res.append(s[i])
         i += 1
 
+res.extend(s[i:])
+res.extend(c[j:])
+
+print(''.join(res))

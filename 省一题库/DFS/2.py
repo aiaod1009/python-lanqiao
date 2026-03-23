@@ -9,6 +9,23 @@ def dfs():
         dfs()
         path.pop()
 dfs()
+
+# n, k = map(int, input().split())
+# a = [0] * (n + 1)  # 数组，下标从1开始用
+#
+# def dfs(pos):
+#     if pos == n + 1:  # 终止条件：已经填到第n+1位
+#         print(' '.join(map(str, a[1:n+1])))
+#         return
+#     # 填第pos位
+#     for i in range(1, k+1):
+#         a[pos] = i
+#         dfs(pos + 1)  # 递归填下一位
+# 
+# dfs(1)  # 从第1位开始
+
+
+
 # n = 2
 # k = 3
 # path = []

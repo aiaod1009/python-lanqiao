@@ -16,4 +16,4 @@ while True:
     if a == -1 and b == -1 and c == -1:
         break
     d = w(a,b,c)
-    print(f"w({a}, {b}, {c}) = {d}")
+    print(f"w({a}, {b}, {c}) = {d}" )

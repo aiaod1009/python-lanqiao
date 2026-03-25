@@ -8,23 +8,19 @@
 #             ans += 1
 # print(ans)
 
-#哈希做法
-from collections import defaultdict
-
+#哈希做法(等价于 A=B+C)
 n, c = map(int, input().split())
-s = list(map(int, input().split()))
-
-# 1. 预处理：把所有数字出现的次数统计起来
-# key是数字值，value是这个值出现的次数
-count = defaultdict(int)
-for num in s:
-    count[num] += 1
-
+ab = list(map(int, input().split()))
+count = {}
+for i in ab:
+    if i in count:
+        count[i] += 1
+    else:
+        count[i] = 1
 ans = 0
-
-# 2. 遍历每一个 B，寻找有多少个 A = B + C
-for b in s:
-    a = b + c
-    # 如果A存在，加上A出现的次数
-    ans += count.get(a, 0)
+for b in ab:
+    #两种方法都可以
+    # if b + c in count:
+    # ans += count[b+c]
+    ans += count.get(b+c,0)
 print(ans)

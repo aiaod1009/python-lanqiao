@@ -21,5 +21,5 @@ for _ in range(t):
         u, v, x, y = map(int, input().split())
         ans = s[x][y] + s[u - 1][v - 1] - s[u - 1][y] - s[x][v - 1]
         ans %= (1 << 64)  #就是2**64
-        res ^= ans
+        res ^= ans  #按位异或
     print(res)

@@ -1,22 +1,23 @@
-import math
-def is_prime(num):
-    if num < 2:
-        return False
-    for i in range(2, int(math.sqrt(num)) + 1):
-        if num % i == 0:
-            return False
-    return True
-def dfs(start, count, current_sum):
-    global ans
-    if count == k:
-        if is_prime(current_sum):
-            ans += 1
-        return
-    for i in range(start, n):
-        dfs(i + 1, count + 1, current_sum + nums[i])
-# 输入处理
-n, k = map(int, input().split())
-nums = list(map(int, input().split()))
-ans = 0
-dfs(0, 0, 0)
-print(ans)
+import sys
+input = lambda:sys.stdin.readline().strip()
+def dfs(vis,now):
+    if all(vis):
+        return True
+    for i in range(n):
+        if not vis[i]:
+            t,d,l = a[i]
+            if now > t+d:  #第 i 架飞机最晚必须降落的时间
+                continue
+            s = max(now,t)  # 真正开始降落的时间 = 等跑道 或 等飞机，取晚的那个
+            if s > t + d:   # 开始时间都晚于最晚时间 → 不行
+                continue
+            vis[i] = 1
+            if dfs(vis,s + l):  # 这架飞机降落结束的时间
+                return True
+            vis[i] = 0
+    return False
+
+for _ in range(int(input())):
+    n = int(input())
+    a = [list(map(int,input().split())) for _ in range(n)]
+    print("YES" if dfs([0]*n,0) else "NO")

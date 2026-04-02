@@ -5,7 +5,7 @@ nums = [[0,0]] * n
 p,c = [0] * n,[0] *n
 for i in range(n):
     nums[i] = list(map(int,input().split()))
-nums.sort(key=lambda x:x[1])
+nums.sort(key=lambda x:x[1]) # 按升序
 for i in range(n):
     p[i],c[i] = nums[i][0],nums[i][1]
 res = cnt = 0

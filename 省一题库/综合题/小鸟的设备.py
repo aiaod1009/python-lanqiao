@@ -27,4 +27,4 @@ for _ in range(100):
         l = mid
     else:
         r = mid
-print("{0:.10f}".format(l))
+print(f"{l:.10f}")

@@ -30,4 +30,3 @@ for _ in range(t):
         if s[i] != s2[i]:
             ans2 += 1
     print(min(ans,ans2) // 2)
-

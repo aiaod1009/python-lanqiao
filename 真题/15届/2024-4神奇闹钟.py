@@ -21,3 +21,22 @@ for _ in range(T):
   last_time = epoch + timedelta(seconds=last)
 
   print(last_time.strftime("%Y-%m-%d %H:%M:%S"))
+
+# import sys
+# from datetime import datetime,timedelta
+# T = int(input())
+#
+# d0 = datetime(1970,1,1,0,0,0)
+#
+# for _ in range(T):
+#     s = sys.stdin.readline().strip()
+#     part = s.split()
+#     t = ' '.join(part[:2])
+#     x = int(part[2])
+#     t1 = datetime.strptime(t,"%Y-%m-%d %H:%M:%S")
+#     total = (t1 - d0).total_seconds()
+#     x *= 60
+#     last = total - (total % x)
+#
+#     ans = d0 + timedelta(seconds=last)
+#     print(ans.strftime("%Y-%m-%d %H:%M:%S"))

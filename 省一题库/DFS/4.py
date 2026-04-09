@@ -12,7 +12,6 @@
 n, k = map(int, input().split())
 res = [0] * k      # 结果数组，长度是 k（选k个人）
 used = [False] * (n+1) # 标记是否用过（1~n）
-
 def dfs(pos):
     if pos == k:
         print(' '.join(map(str,res)))

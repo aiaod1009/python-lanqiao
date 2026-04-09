@@ -21,7 +21,6 @@ def dfs(pos):
         dfs(pos+1)
 dfs(0)
 
-
 # n = 2
 # k = 3
 # path = []

@@ -1,8 +1,5 @@
-import os
 import sys
 from datetime import datetime, timedelta
-# 请在此输入您的代码
-
 epoch = datetime(1970, 1, 1, 0, 0, 0)
 
 T = int(input())

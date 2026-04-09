@@ -1,3 +1,4 @@
+#可以暴力
 n = int(input())
 a = input().split()
 dp = [0] * 10

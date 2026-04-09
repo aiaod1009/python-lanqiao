@@ -14,9 +14,9 @@ n, k = map(int, input().split())
 res = [0] * n
 def dfs(pos):
     if pos == n:
-        print(''.join(map(str,res)))
+        print(' '.join(map(str,res)))
         return
-    for i in range(1,n+1):
+    for i in range(1,k+1):
         res[pos] = i
         dfs(pos+1)
 dfs(0)

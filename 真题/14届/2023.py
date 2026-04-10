@@ -30,6 +30,14 @@
 #         add = min(i,j)
 #         max_cnt[s] += add
 # print(max(max_cnt))
+c = [0] * 4047
+for i in range(1,2024):
+    c[i] += i
+
+for i in range(1,2024):
+    for j in range(i+1,2024):
+        c[i + j] += i
+print(max(c))
 
 # 3 线性二维dp(一维也可以解，详细看2023-3）
 # import sys

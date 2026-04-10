@@ -24,3 +24,24 @@ else:
 # else:
 #     rev = s[::-1].lstrip('0')
 #     print(rev)
+
+N = int(input())
+# 处理0的特殊情况
+if N == 0:
+    print(0)
+else:
+    # 记录符号，统一转正数处理
+    sign = 1
+    if N < 0:
+        sign = -1
+        N = -N
+    res = 0
+    while N > 0:
+        # 取最后一位
+        digit = N % 10
+        # 把当前位放到结果的末尾
+        res = res * 10 + digit
+        # 去掉最后一位
+        N = N // 10
+    # 还原符号
+    print(sign * res)

@@ -15,13 +15,19 @@ import sys
 # print(f"{h:02d}:{m:02d}:{s:02d}")
 
 # 法二
+# from datetime import datetime,timedelta
+#
+# ms = int(input())
+#
+# epoch = datetime(1970,1,1)
+# time = epoch + timedelta(milliseconds=ms)
+#
+# t = time.strftime("%H:%M:%S")
+#
+# print(t)
+
 from datetime import datetime,timedelta
-
-ms = int(input())
-
-epoch = datetime(1970,1,1)
-time = epoch + timedelta(milliseconds=ms)
-
-t = time.strftime("%H:%M:%S")
-
-print(t)
+n = int(input())
+d = datetime(1970,1,1)
+time = d + timedelta(seconds=n//1000)
+print(time.strftime("%H:%M:%S"))

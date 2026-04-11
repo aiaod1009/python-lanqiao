@@ -6,8 +6,8 @@ else:
     cnt = 0
     m = len(s) // k
     for i in range(m):
-        c = [0] * 26
+        c = [0] * 26  #字母出现次数
         for j in range(i, len(s), m):
             c[ord(s[j]) - 97] += 1
-        cnt += k - max(c)
+        cnt += k - max(c)  #改成出现最多的那个字母的次数
     print(cnt)

@@ -8,7 +8,8 @@ def check(y,m,d):
         return False
 # 枚举所有6种格式
 for y,m,d in [(1900+a,b,c),(2000+a,b,c),(1900+c,a,b),(2000+c,a,b),(1900+c,b,a),(2000+c,b,a)]:
-    if check(y,m,d):res.add((y,m,d))
+    if check(y,m,d):
+        res.add((y,m,d))
 # 排序输出
 for y,m,d in sorted(res):
     print(f"{y}-{m:02d}-{d:02d}")

@@ -11,3 +11,4 @@ for i in range(1, 2026):
     if i % 10 == 7:
         count += 1
 print(count)  # 结果也是 202
+# 因为3*3*3=27

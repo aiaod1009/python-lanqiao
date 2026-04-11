@@ -1,6 +1,6 @@
 n,m  = map(int,input().split())
 a = list(map(int,input().split()))
-a = sorted(set(a))
+a = sorted(a)
 
 vis = [False] * (n + 2)# 标记数组：vis[x] = True 表示第 x 个灯塔亮了
 ans = 0

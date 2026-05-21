@@ -8,6 +8,8 @@ t = sum(a)
 h = t // 2
 dp = [0]*(h+1)
 dp[0] = 1
+#从大到小遍历
+#倒序遍历是为了保证每个数字只被选一次
 for k in a:
     for i in range(h,k-1,-1):
         if dp[i-k]:

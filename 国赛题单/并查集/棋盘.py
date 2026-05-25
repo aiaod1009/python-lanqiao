@@ -13,7 +13,7 @@ for _ in range(m):
     grid[x][y] = c  # 落子染色
     cnt += 1  # 默认新棋子自己成立一个新的连通块
     cid = x * (n + 1) + y
-    for dx,dy in [(-1,0),(1,0),(0,-1),(0,1)]:
+    for dx,dy in [(-1,0),(1,0),(0,-1),(01)]:
         nx,ny = x + dx,y + dy
         if 1 <= nx <= n and 1 <= ny <= n:
             if grid[nx][ny] == c:

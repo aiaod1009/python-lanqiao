@@ -15,12 +15,11 @@ primes = [i for i, val in enumerate(is_prime) if val]
 ans = 0
 L = 2333
 R = 23333333333333
-n = len(primes)
-for i in range(n):
+for i in range(len(primes)):
     p = primes[i]
     if p**4 > R:
         break
-    for j in range(i+1, n):
+    for j in range(i+1, len(primes)):
         q = primes[j]
         num = (p*q)**2
         if num > R:

@@ -5,7 +5,7 @@ dx = [2, 2, -2, -2, 1, 1, -1, -1]
 dy = [1, -1, 1, -1, 2, -2, 2, -2]
 q = deque()
 dist[x][y] = 0
-q.append((x,y))
+q.append((x,y))  #q = deque([(i,j)])
 while q:
     cx,cy = q.popleft()
     for i in range(8):

@@ -11,7 +11,7 @@ cnt = 0
 for _ in range(m):
     c,x,y = map(int,input().split())
     grid[x][y] = c  # 落子染色
-    cnt += 1  # 默认新棋子自己成立一个新的连通块
+    cnt += 1
     cid = x * (n + 1) + y
     for dx,dy in [(-1,0),(1,0),(0,-1),(01)]:
         nx,ny = x + dx,y + dy

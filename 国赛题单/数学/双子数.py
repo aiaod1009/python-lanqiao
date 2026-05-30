@@ -17,7 +17,7 @@ for i in range(len(primes)):
         product = p * q
         if product > R:  # 爆上限了，后面的 q 更大，直接切断内层
             break
-        if product >= L:  # 落在区间内，合格！
+        if product >= L:  # 落在区间内，合格
             ans += 1
 
 print(ans)

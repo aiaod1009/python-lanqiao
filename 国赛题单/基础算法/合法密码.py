@@ -3,7 +3,7 @@ cnt = 0
 n = len(s)
 for i in range(n):
     num=0
-    sym = 0  #符号
+    sym = 0  #符号数量
     for j in range(i,n):
         c = s[j]
         if c.isdigit():

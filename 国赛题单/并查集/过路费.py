@@ -5,7 +5,7 @@ e = []
 for _ in range(m):
     u,v,w = map(int,input().split())
     e.append((w,u,v))
-e.sort()  #从低到高排好序
+e.sort()  #从低到高排序
 fa = list(range(n+1))
 sz = [1] * (n+1)
 def find(x):

@@ -9,8 +9,9 @@ a = [0]+list(map(int, input().split()))
 last = 0; res = 0
 j = 1
 for i in range(1, n+1):
-  t = math.gcd(g, a[i])
-  if t != g:
+  # t = math.gcd(g, a[i])
+  # if t != g:
+  if a[i] % g != 0:
     j = last + 1
     last = i
   if i-j+1 >= 2: res += i-j

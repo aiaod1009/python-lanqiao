@@ -5,3 +5,5 @@ for i in range(1,2021):
             cnt += 1
             break
 print(cnt)
+
+# 一行版:print(sum(1 for i in range(1,2021) if '2' in str(i)))

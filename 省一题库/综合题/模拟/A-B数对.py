@@ -22,5 +22,5 @@ for b in ab:
     #两种方法都可以
     # if b + c in count:
     # ans += count[b+c]
-    ans += count.get(b+c,0)
+    ans += count.get(b+c,0)# 判断在不在不在则0
 print(ans)

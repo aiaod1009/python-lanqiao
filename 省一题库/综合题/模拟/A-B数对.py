@@ -8,7 +8,7 @@
 #             ans += 1
 # print(ans)
 
-#哈希做法(等价于 A=B+C)
+#哈希做法(原题等价于 A=B+C)
 n, c = map(int, input().split())
 ab = list(map(int, input().split()))
 count = {}

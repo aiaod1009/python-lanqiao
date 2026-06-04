@@ -12,8 +12,7 @@ q = int(input())
 #             break
 #     print(ans)
 
-
-# 哈希法
+# 哈希法o(1)
 # pos = {value: index+1 for index, value in enumerate(a)}
 pos = {}
 for i in range(n):
@@ -21,7 +20,6 @@ for i in range(n):
 for i in range(q):
     m = int(input().strip())
     print(pos.get(m, 0))  # 找到返回位置，找不到返回0
-
 
 # 二分法
 import bisect

@@ -37,25 +37,21 @@ for _ in range(m):
         else:
             bisect.insort(w, l)
     else:
-        # 出货：二分找位置
         if not w:
             print("Empty")
             continue
         idx = bisect.bisect_left(w, l)
         best = 0
-        # 情况1：所有木头都比 l 大 → 拿第一个
-        if idx == 0:
+        if idx == 0:# 情况1：所有木头都比 l 大 → 拿第一个
             best = w[0]
-        # 情况2：所有木头都比 l 小 → 拿最后一个
-        elif idx == len(w):
+        elif idx == len(w):# 情况2：所有木头都比 l 小 → 拿最后一个
             best = w[-1]
-        # 情况3：左右都有，选更近的；一样近选小的
-        else:
+        else:# 情况3：左右都有，选更近的；一样近选小的
             left = w[idx - 1]
             right = w[idx]
             if l - left <= right - l:
                 best = left
             else:
                 best = right
-        w.remove(best)
+        w.pop(best) #remove也行
         print(best)

@@ -9,10 +9,11 @@ for _ in range(q):
         d[s[1]] = s[2]
         print("OK")
     elif op == 2:
-        if s[1] in d:
-            print(d[s[1]])
-        else:
-            print("Not found")
+        # if s[1] in d:
+        #     print(d[s[1]])
+        # else:
+        #     print("Not found")
+        print(d.get(s[1],"Not found"))
     elif op == 3:
         if s[1] in d:
             del d[s[1]]

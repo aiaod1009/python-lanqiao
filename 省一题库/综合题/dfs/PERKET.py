@@ -2,19 +2,15 @@
 import sys
 input = lambda:sys.stdin.readline().strip()
 n = int(input())
-# 用list也一样
-f = [tuple(map(int,input().split())) for _ in range(n)]
-ans = float('inf')
-def dfs(idx,s,b):
-    global ans
-    if idx == n:
-        if not(s==1 and b == 0):
-            ans = min(ans,abs(s-b))
-        return
-    dfs(idx + 1,s,b)
-    dfs(idx + 1,s*f[idx][0],b+f[idx][1])
-dfs(0,1,0)
-print(ans)
+f = [tuple(map(int, input().split())) for _ in range(n)]
+def dfs(idx, s, b):
+    if idx == n: #出口
+        if s == 1 and b == 0:
+            return float('inf')  # 空方案返回无穷大，不影响最小值
+        return abs(s - b)
+    # 不选当前 + 选当前，取最小值
+    return min(dfs(idx + 1, s, b), dfs(idx + 1, s * f[idx][0], b + f[idx][1]))
+print(dfs(0, 1, 0))
 
 # pypy的ac代码
 n = int(input())

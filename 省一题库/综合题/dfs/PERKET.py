@@ -12,7 +12,7 @@ def dfs(idx, s, b):
     return min(dfs(idx + 1, s, b), dfs(idx + 1, s * f[idx][0], b + f[idx][1]))
 print(dfs(0, 1, 0))
 
-# pypy的ac代码
+# 靠返回值取 min
 n = int(input())
 foods = [tuple(map(int, input().split())) for _ in range(n)]
 min_diff = float('inf')
